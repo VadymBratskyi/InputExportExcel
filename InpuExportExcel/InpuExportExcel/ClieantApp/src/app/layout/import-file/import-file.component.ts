@@ -15,12 +15,18 @@ export class ImportFileComponent implements OnInit {
   ngOnInit() {
   }
 
-  onImportFile() {
+  onPost() {
       
+    this.importServ.postTestObjects().subscribe(res => {
+      alert("Finish");
+    });
+
   }
 
   onRefresh() {
     this.importServ.onRefreshData.emit();
   }
+
+
 
 }
