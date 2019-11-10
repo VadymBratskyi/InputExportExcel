@@ -49,13 +49,11 @@ namespace InpuExportExcel.Controllers
         }
 
         
-        [HttpPost("[action]")]
-        public async Task<IActionResult> PostAddFile(List<IFormFile> files) { 
+        [HttpPost("[action]")]                          //List<IFormFile>
+        public async Task<IActionResult> PostAddFile(IFormFileCollection  files) { 
 
             if (files != null && files.Count > 0)
             {
-                var flList = new List<FileModel>();
-
                 foreach (var fl in files) {
                     // путь к папке Files
                     string path = "/Files/" + fl.FileName;
@@ -65,10 +63,8 @@ namespace InpuExportExcel.Controllers
                         await fl.CopyToAsync(fileStream);
                     }
                     FileModel file = new FileModel { Name = fl.FileName, Path = path };
-                    flList.Add(file);
+                    _db.Files.Add(file);
                 }
-
-                _db.Files.AddRange(flList);
                 _db.SaveChanges();
 
             }
