@@ -18,22 +18,31 @@ export class ImportService {
     protected http: HttpClient
   ) { }
 
-  // public getTestObjects(): Observable<TestObject> {
+  public postTestObjects(): Observable<TestObject> {
     
-  //   const table = host + urlApi;
-         
-  //   return this.http.get(table)
-  //   .pipe(
-  //       map((response: any) => {
-  //         return response;
-  //     }),
-  //     catchError((error: HttpErrorResponse) => {
-  //       console.error('getTestObjects: ', error);       
-  //       return Observable.throw(error);
-  //     })
-  //   );
-  // }
+    const method = '/PostTestObjects';
 
+    const table = host + urlApi + method;
+
+    var body = {
+      value: "Hello"
+    };
+         
+    return this.http.post(table, body)
+    .pipe(
+        map((response: any) => {
+          alert(response);
+          return response;
+      }),
+      catchError((error: HttpErrorResponse) => {
+        console.error('getTestObjects: ', error);       
+        return Observable.throw(error);
+      })
+    );
+  }
+
+
+  
   public getTestObjects(): Observable<TestObject[]> {
     
     const method = "/GetTestObjects";

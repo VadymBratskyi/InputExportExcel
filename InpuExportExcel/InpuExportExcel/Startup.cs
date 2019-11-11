@@ -32,7 +32,10 @@ namespace InpuExportExcel
             services.AddDbContext<InputExportDbContext>(options =>
                 options.UseSqlServer(connectionString));
 
-            services.AddCors();
+            services.AddCors(options =>
+                options.AddPolicy("AllowOrigin",
+                        builder =>                         
+                        builder.WithOrigins("http://localhost:4200").AllowAnyHeader().AllowAnyMethod().AllowCredentials()));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
@@ -40,6 +43,8 @@ namespace InpuExportExcel
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseCors("AllowOrigin");
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -50,9 +55,9 @@ namespace InpuExportExcel
                 app.UseHsts();
             }
 
-            app.UseCors(options => options.AllowAnyOrigin());
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
 
-            app.UseHttpsRedirection();
             app.UseMvc();
 
         }

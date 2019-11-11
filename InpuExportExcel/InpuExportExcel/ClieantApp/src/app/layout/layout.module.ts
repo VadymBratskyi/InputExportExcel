@@ -12,6 +12,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 import { ImportFileComponent } from './import-file/import-file.component';
 import { DataListComponent } from './data-list/data-list.component';
+import { FileUploadModule } from '../shared/file-upload/file-upload.module';
 
 @NgModule({
   declarations: [
@@ -22,13 +23,14 @@ import { DataListComponent } from './data-list/data-list.component';
   imports: [
     CommonModule,
     LayoutRoutingModule,
+    FileUploadModule,
 
     /*material*/
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
     MatTableModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule    
   ]
 })
 export class LayoutModule { }
