@@ -1,0 +1,17 @@
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportEcel\InpuExportExcel\InputExcel\bin\Debug\netcoreapp3.0\appsettings.Development.json
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportEcel\InpuExportExcel\InputExcel\bin\Debug\netcoreapp3.0\appsettings.json
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportEcel\InpuExportExcel\InputExcel\bin\Debug\netcoreapp3.0\Properties\launchSettings.json
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportEcel\InpuExportExcel\InputExcel\bin\Debug\netcoreapp3.0\InputExcel.exe
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportEcel\InpuExportExcel\InputExcel\bin\Debug\netcoreapp3.0\InputExcel.deps.json
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportEcel\InpuExportExcel\InputExcel\bin\Debug\netcoreapp3.0\InputExcel.runtimeconfig.json
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportEcel\InpuExportExcel\InputExcel\bin\Debug\netcoreapp3.0\InputExcel.runtimeconfig.dev.json
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportEcel\InpuExportExcel\InputExcel\bin\Debug\netcoreapp3.0\InputExcel.dll
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportEcel\InpuExportExcel\InputExcel\bin\Debug\netcoreapp3.0\InputExcel.pdb
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportEcel\InpuExportExcel\InputExcel\obj\Debug\netcoreapp3.0\InputExcel.csprojAssemblyReference.cache
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportEcel\InpuExportExcel\InputExcel\obj\Debug\netcoreapp3.0\staticwebassets\InputExcel.StaticWebAssets.Manifest.cache
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportEcel\InpuExportExcel\InputExcel\obj\Debug\netcoreapp3.0\staticwebassets\InputExcel.StaticWebAssets.xml
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportEcel\InpuExportExcel\InputExcel\obj\Debug\netcoreapp3.0\InputExcel.AssemblyInfoInputs.cache
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportEcel\InpuExportExcel\InputExcel\obj\Debug\netcoreapp3.0\InputExcel.AssemblyInfo.cs
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportEcel\InpuExportExcel\InputExcel\obj\Debug\netcoreapp3.0\InputExcel.RazorTargetAssemblyInfo.cache
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportEcel\InpuExportExcel\InputExcel\obj\Debug\netcoreapp3.0\InputExcel.dll
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportEcel\InpuExportExcel\InputExcel\obj\Debug\netcoreapp3.0\InputExcel.pdb
