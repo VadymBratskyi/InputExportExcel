@@ -3,6 +3,8 @@ C:\GithubProject\InputExportExcel\InpuExportExcel\InpuExportExcel\bin\Debug\netc
 C:\GithubProject\InputExportExcel\InpuExportExcel\InpuExportExcel\bin\Debug\netcoreapp2.2\InpuExportExcel.runtimeconfig.dev.json
 C:\GithubProject\InputExportExcel\InpuExportExcel\InpuExportExcel\bin\Debug\netcoreapp2.2\InpuExportExcel.dll
 C:\GithubProject\InputExportExcel\InpuExportExcel\InpuExportExcel\bin\Debug\netcoreapp2.2\InpuExportExcel.pdb
+C:\GithubProject\InputExportExcel\InpuExportExcel\InpuExportExcel\bin\Debug\netcoreapp2.2\ExcelParserLibrary.dll
+C:\GithubProject\InputExportExcel\InpuExportExcel\InpuExportExcel\bin\Debug\netcoreapp2.2\ExcelParserLibrary.pdb
 C:\GithubProject\InputExportExcel\InpuExportExcel\InpuExportExcel\obj\Debug\netcoreapp2.2\InpuExportExcel.csprojAssemblyReference.cache
 C:\GithubProject\InputExportExcel\InpuExportExcel\InpuExportExcel\obj\Debug\netcoreapp2.2\InpuExportExcel.csproj.CoreCompileInputs.cache
 C:\GithubProject\InputExportExcel\InpuExportExcel\InpuExportExcel\obj\Debug\netcoreapp2.2\InpuExportExcel.RazorAssemblyInfo.cache
@@ -10,5 +12,6 @@ C:\GithubProject\InputExportExcel\InpuExportExcel\InpuExportExcel\obj\Debug\netc
 C:\GithubProject\InputExportExcel\InpuExportExcel\InpuExportExcel\obj\Debug\netcoreapp2.2\InpuExportExcel.AssemblyInfoInputs.cache
 C:\GithubProject\InputExportExcel\InpuExportExcel\InpuExportExcel\obj\Debug\netcoreapp2.2\InpuExportExcel.AssemblyInfo.cs
 C:\GithubProject\InputExportExcel\InpuExportExcel\InpuExportExcel\obj\Debug\netcoreapp2.2\InpuExportExcel.RazorTargetAssemblyInfo.cache
+C:\GithubProject\InputExportExcel\InpuExportExcel\InpuExportExcel\obj\Debug\netcoreapp2.2\InpuExportExcel.csproj.CopyComplete
 C:\GithubProject\InputExportExcel\InpuExportExcel\InpuExportExcel\obj\Debug\netcoreapp2.2\InpuExportExcel.dll
 C:\GithubProject\InputExportExcel\InpuExportExcel\InpuExportExcel\obj\Debug\netcoreapp2.2\InpuExportExcel.pdb

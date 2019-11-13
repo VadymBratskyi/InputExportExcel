@@ -16,4 +16,8 @@
     <Folder Include="wwwroot\Files\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ExcelParserLibrary\ExcelParserLibrary.csproj" />
+  </ItemGroup>
+
 </Project>

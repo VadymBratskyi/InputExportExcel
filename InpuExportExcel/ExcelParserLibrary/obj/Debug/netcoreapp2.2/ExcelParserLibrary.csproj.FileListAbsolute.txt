@@ -1,0 +1,9 @@
+C:\GithubProject\InputExportExcel\InpuExportExcel\ExcelParserLibrary\bin\Debug\netcoreapp2.2\ExcelParserLibrary.deps.json
+C:\GithubProject\InputExportExcel\InpuExportExcel\ExcelParserLibrary\bin\Debug\netcoreapp2.2\ExcelParserLibrary.dll
+C:\GithubProject\InputExportExcel\InpuExportExcel\ExcelParserLibrary\bin\Debug\netcoreapp2.2\ExcelParserLibrary.pdb
+C:\GithubProject\InputExportExcel\InpuExportExcel\ExcelParserLibrary\obj\Debug\netcoreapp2.2\ExcelParserLibrary.csproj.CoreCompileInputs.cache
+C:\GithubProject\InputExportExcel\InpuExportExcel\ExcelParserLibrary\obj\Debug\netcoreapp2.2\ExcelParserLibrary.AssemblyInfoInputs.cache
+C:\GithubProject\InputExportExcel\InpuExportExcel\ExcelParserLibrary\obj\Debug\netcoreapp2.2\ExcelParserLibrary.AssemblyInfo.cs
+C:\GithubProject\InputExportExcel\InpuExportExcel\ExcelParserLibrary\obj\Debug\netcoreapp2.2\ExcelParserLibrary.dll
+C:\GithubProject\InputExportExcel\InpuExportExcel\ExcelParserLibrary\obj\Debug\netcoreapp2.2\ExcelParserLibrary.pdb
+C:\GithubProject\InputExportExcel\InpuExportExcel\ExcelParserLibrary\obj\Debug\netcoreapp2.2\ExcelParserLibrary.csprojAssemblyReference.cache
