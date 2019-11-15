@@ -49,14 +49,20 @@ namespace InpuExportExcel.Controllers
             {
                 foreach (var fl in files) {
                     // путь к папке Files
-                    string path = "/Files/" + fl.FileName;
-                    // сохраняем файл в папку Files в каталоге wwwroot
-                    using (var fileStream = new FileStream(_hosting.WebRootPath + path, FileMode.Create))
-                    {
-                        await fl.CopyToAsync(fileStream);
+                    string path = "Files\\" + fl.FileName;
+
+                    var fullPAth = Path.Combine(_hosting.WebRootPath,  path);
+
+                    if (!System.IO.File.Exists(fullPAth)) {
+                        // сохраняем файл в папку Files в каталоге wwwroot
+                        using (var fileStream = new FileStream(fullPAth, FileMode.Create))
+                        {
+                            await fl.CopyToAsync(fileStream);
+                        }
+                        FileModel file = new FileModel { Name = fl.FileName, Path = path };
+                        _db.Files.Add(file);
                     }
-                    FileModel file = new FileModel { Name = fl.FileName, Path = path };
-                    _db.Files.Add(file);
+                   
                 }
                 _db.SaveChanges();
 

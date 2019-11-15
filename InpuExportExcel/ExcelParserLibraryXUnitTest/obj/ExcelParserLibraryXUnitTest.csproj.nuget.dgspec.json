@@ -1,0 +1,136 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParserLibraryXUnitTest\\ExcelParserLibraryXUnitTest.csproj": {}
+  },
+  "projects": {
+    "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParserLibraryXUnitTest\\ExcelParserLibraryXUnitTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParserLibraryXUnitTest\\ExcelParserLibraryXUnitTest.csproj",
+        "projectName": "ExcelParserLibraryXUnitTest",
+        "projectPath": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParserLibraryXUnitTest\\ExcelParserLibraryXUnitTest.csproj",
+        "packagesPath": "C:\\Users\\Vadim\\.nuget\\packages\\",
+        "outputPath": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParserLibraryXUnitTest\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Vadim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParserLibrary\\ExcelParserLibrary.csproj": {
+                "projectPath": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParserLibrary\\ExcelParserLibrary.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.0.1, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParserLibrary\\ExcelParserLibrary.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParserLibrary\\ExcelParserLibrary.csproj",
+        "projectName": "ExcelParserLibrary",
+        "projectPath": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParserLibrary\\ExcelParserLibrary.csproj",
+        "packagesPath": "C:\\Users\\Vadim\\.nuget\\packages\\",
+        "outputPath": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParserLibrary\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Vadim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "DocumentFormat.OpenXml": {
+              "target": "Package",
+              "version": "[2.9.1, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
