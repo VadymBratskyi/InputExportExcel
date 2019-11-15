@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Bogus;
 using InpuExportExcel.Models;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Hosting;
@@ -15,30 +16,22 @@ namespace InpuExportExcel.Controllers
     [EnableCors("AllowOrigin")]
     public class InputController : Controller
     {
-        private List<TestObject> testList = new List<TestObject>() {
-            new TestObject() { Name = "AAAAAA", Number = 1 },
-            new TestObject() { Name = "BBBBBB", Number = 2 },
-            new TestObject() { Name = "CCCCCC", Number = 3 },
-            new TestObject() { Name = "DDDDDD", Number = 4 },
-            new TestObject() { Name = "EEEEEE", Number = 5 },
-            new TestObject() { Name = "FFFFFF", Number = 6 },
-            new TestObject() { Name = "GGGGGG", Number = 7 },
-
-        };
-
+        private List<TestObject> testList;
         private InputExportDbContext _db;
         private IHostingEnvironment _hosting;
+
 
         public InputController(InputExportDbContext db, IHostingEnvironment hostingEnvironment) {
             _db = db;
             _hosting = hostingEnvironment;
-            loadData();
+            //loadData();
+            AvtoGenerateUsers();
         }
         
         [HttpGet("[action]")]
         public ActionResult<IEnumerable<TestObject>> GetTestObjects()
         {
-            var data = _db.TestObjects;
+            var data = testList;
             return data.ToList();
         }
 
@@ -106,7 +99,20 @@ namespace InpuExportExcel.Controllers
             }
         }
 
-
+        private void AvtoGenerateUsers() {
+            var faker = new Faker("ru");
+            testList = new List<TestObject>()
+            {
+                new TestObject() { Name = faker.Name.FullName(), Number = 1 },
+                new TestObject() { Name = faker.Name.FullName(), Number = 2 },
+                new TestObject() { Name = faker.Name.FullName(), Number = 3 },
+                new TestObject() { Name = faker.Name.FullName(), Number = 4 },
+                new TestObject() { Name = faker.Name.FullName(), Number = 5 },
+                new TestObject() { Name = faker.Name.FullName(), Number = 6 },
+                new TestObject() { Name = faker.Name.FullName(), Number = 7 },
+                new TestObject() { Name = faker.Name.FullName(), Number = 8 }
+            };
+        }
 
 
         // GET api/values

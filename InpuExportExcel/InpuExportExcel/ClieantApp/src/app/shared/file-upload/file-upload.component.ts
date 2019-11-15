@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ImportService } from 'src/app/_services/import.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-file-upload',
@@ -8,8 +9,8 @@ import { ImportService } from 'src/app/_services/import.service';
 })
 export class FileUploadComponent implements OnInit {
   
-  uploadSaveUrl = 'https://localhost:5001/api/Input/PostAddFile'; // should represent an actual API endpoint
-  uploadRemoveUrl = 'https://localhost:5001/api/Input/PostRemoveFiles'; // should represent an actual API endpoint
+  uploadSaveUrl = environment.localhostApp + environment.urlApi + 'PostAddFile'; // should represent an actual API endpoint
+  uploadRemoveUrl = environment.localhostApp + environment.urlApi + 'PostRemoveFiles'; // should represent an actual API endpoint
 
   constructor (
     private importServ: ImportService

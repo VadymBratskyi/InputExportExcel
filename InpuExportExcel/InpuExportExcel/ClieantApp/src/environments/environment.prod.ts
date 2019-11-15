@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  localhostApp: 'http://localhost:54641',
+  urlApi: 'api/Input'
 };

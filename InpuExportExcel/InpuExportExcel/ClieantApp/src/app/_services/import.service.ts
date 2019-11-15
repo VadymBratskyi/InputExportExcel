@@ -3,9 +3,7 @@ import { TestObject } from '../_models/TestObject';
 import { Observable } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-
-const host = "https://localhost:5001/";
-const urlApi = "api/Input";
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -20,9 +18,9 @@ export class ImportService {
 
   public postTestObjects(): Observable<TestObject> {
     
-    const method = '/PostTestObjects';
+    const method = 'PostTestObjects';
 
-    const table = host + urlApi + method;
+    const table = environment.localhostApp + environment.urlApi + method;
 
     var body = {
       value: "Hello"
@@ -45,9 +43,9 @@ export class ImportService {
   
   public getTestObjects(): Observable<TestObject[]> {
     
-    const method = "/GetTestObjects";
+    const method = "GetTestObjects";
 
-    const table = host + urlApi + method;
+    const table = environment.localhostApp + environment.urlApi + method;
          
     return this.http.get(table)
     .pipe(
