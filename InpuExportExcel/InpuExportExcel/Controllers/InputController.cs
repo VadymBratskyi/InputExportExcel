@@ -4,6 +4,8 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Bogus;
+using ExcelParserLibrary.Models;
+using ExcelParserLibrary.Process;
 using InpuExportExcel.Models;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Hosting;
@@ -17,6 +19,7 @@ namespace InpuExportExcel.Controllers
     public class InputController : Controller
     {
         private List<TestObject> testList;
+
         private InputExportDbContext _db;
         private IHostingEnvironment _hosting;
 
@@ -25,20 +28,45 @@ namespace InpuExportExcel.Controllers
             _db = db;
             _hosting = hostingEnvironment;
             //loadData();
-            AvtoGenerateUsers();
+            //AvtoGenerateUsers();
         }
         
         [HttpGet("[action]")]
         public ActionResult<IEnumerable<TestObject>> GetTestObjects()
         {
-            var data = testList;
+            var data = _db.TestObjects.Take(10);
             return data.ToList();
         }
 
         [HttpPost("[action]")]
-        public void PostTestObjects([FromBody] TestValue value)
+        public async Task<IActionResult> PostDomParsing([FromBody] MyFile myFile)
         {
+            var filePath = _hosting.WebRootPath + "\\Files\\" + myFile.FileName;
+                     
+            if (System.IO.File.Exists(filePath)) {
+                DomProcessParsing parsing = new DomProcessParsing();
+                var result = parsing.Parsing(filePath);
+                if (result.Any()) {
+                    _db.TestObjects.AddRange(result);
+                    _db.SaveChanges();
+                }
+            }
+            return Ok();
+        }
 
+        [HttpPost("[action]")]
+        public async Task<IActionResult> PostSaxParsing([FromBody] MyFile myFile)
+        {
+            var filePath = _hosting.WebRootPath + "Files\\" + myFile.FileName;
+
+            if (System.IO.File.Exists(filePath))
+            {
+                SaxProcessParsing parsing = new SaxProcessParsing();
+                var result = parsing.Parsing(filePath);
+
+            }
+
+            return Ok();
         }
 
         
@@ -49,6 +77,7 @@ namespace InpuExportExcel.Controllers
             {
                 foreach (var fl in files) {
                     // путь к папке Files
+
                     string path = "Files\\" + fl.FileName;
 
                     var fullPAth = Path.Combine(_hosting.WebRootPath,  path);
@@ -67,7 +96,6 @@ namespace InpuExportExcel.Controllers
                 _db.SaveChanges();
 
             }
-
 
             return Ok();
 
@@ -98,8 +126,8 @@ namespace InpuExportExcel.Controllers
 
         private void loadData()
         {
-            var data = _db.TestObjects;
-            if (!data.Any()) {
+            testList = _db.TestObjects.ToList();
+            if (!testList.Any()) {
                 _db.TestObjects.AddRange(testList);
                 _db.SaveChanges();
             }
@@ -158,7 +186,7 @@ namespace InpuExportExcel.Controllers
         public string Value { get; set; }
     }
 
-    public class MyFIles
+    public class MyFile
     {
         public string FileName { get; set; }
     }

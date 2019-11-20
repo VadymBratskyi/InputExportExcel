@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "10893bcb524e0f8d262b85c596effe3b21351b28"
+    "signature": ""
   },
   "compilationOptions": {
     "defines": [
@@ -10,7 +10,7 @@
       "NETCOREAPP",
       "NETCOREAPP2_2"
     ],
-    "languageVersion": "",
+    "languageVersion": "7.3",
     "platform": "",
     "allowUnsafe": false,
     "warningsAsErrors": false,
@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v2.2": {
       "InpuExportExcel/1.0.0": {
         "dependencies": {
+          "Bogus": "28.4.1",
           "ExcelParserLibrary": "1.0.0",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
@@ -36,6 +37,17 @@
         },
         "compile": {
           "InpuExportExcel.dll": {}
+        }
+      },
+      "Bogus/28.4.1": {
+        "runtime": {
+          "lib/netstandard2.0/Bogus.dll": {
+            "assemblyVersion": "28.4.1.0",
+            "fileVersion": "28.4.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Bogus.dll": {}
         }
       },
       "DocumentFormat.OpenXml/2.9.1": {
@@ -3598,6 +3610,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Bogus/28.4.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SmHm3V+4j7VZZ4VnsnSXdRf9ZeBVir33YSnRHLseAuSHpmhk+hi66DXqmT4sXPOz0zFJDPGnFYuIwkB8tTMycg==",
+      "path": "bogus/28.4.1",
+      "hashPath": "bogus.28.4.1.nupkg.sha512"
     },
     "DocumentFormat.OpenXml/2.9.1": {
       "type": "package",

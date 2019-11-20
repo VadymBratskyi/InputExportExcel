@@ -1,19 +1,23 @@
 using ExcelParserLibrary;
+using ExcelParserLibrary.Process;
 using System;
 using Xunit;
 
 namespace ExcelParserLibraryXUnitTest
 {
-    public class UnitTest1
+    public class ProcessParsingTest
     {
         [Fact]
         public void Test1()
         {
-            var filePath = @"C:\GithubProject\InputExportExcel\InpuExportExcel\InpuExportExcel\wwwroot\Files\TestImport_1000.xlsx";
+            var filePath = @"C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\InpuExportExcel\wwwroot\Files\TestImport_1000.xlsx";
 
             var result = false;
 
-            ProcessParsing.ReadExcelFile(filePath);
+            DomProcessParsing domProcess = new DomProcessParsing();
+            domProcess.Parsing(filePath);
+
+            Assert.True(result);
 
         }
     }

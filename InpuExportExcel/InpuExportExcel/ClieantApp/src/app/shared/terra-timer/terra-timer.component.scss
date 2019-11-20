@@ -1,0 +1,20 @@
+.timer {
+    z-index: 9999;
+    position: fixed;
+    top: 0; 
+    right: 0;
+    bottom: 0; 
+    left: 0;
+    background: rgba(66, 66, 66, 0.39);
+}
+
+.timing {    
+    color: white;
+    left: 40%;      
+    font-size: 100px;    
+}
+
+.timing {
+    position: absolute;
+    top: 40%;
+}

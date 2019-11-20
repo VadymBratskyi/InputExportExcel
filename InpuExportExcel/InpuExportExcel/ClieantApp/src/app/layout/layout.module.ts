@@ -7,12 +7,14 @@ import { LayoutComponent } from './layout.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button'
+
 import {MatTableModule} from '@angular/material/table';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import { ImportFileComponent } from './import-file/import-file.component';
 import { DataListComponent } from './data-list/data-list.component';
 import { FileUploadModule } from '../shared/file-upload/file-upload.module';
+import { TerraTimerModule } from '../shared/terra-timer/terra-timer.module';
 
 @NgModule({
   declarations: [
@@ -24,11 +26,13 @@ import { FileUploadModule } from '../shared/file-upload/file-upload.module';
     CommonModule,
     LayoutRoutingModule,
     FileUploadModule,
+    TerraTimerModule,
 
     /*material*/
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
+    MatButtonToggleModule,
     MatTableModule,
     MatProgressSpinnerModule    
   ]

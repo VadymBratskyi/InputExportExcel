@@ -1,0 +1,5 @@
+<div class="timer" *ngIf="timeServ.start">
+    <div class="timing">
+        {{timeServ.GetMinutes < 10 ? "0"+timeServ.GetMinutes : timeServ.GetMinutes}}:{{timeServ.GetSeccontd < 10 ? "0"+timeServ.GetSeccontd : timeServ.GetSeccontd}}:{{timeServ.GetMiliSeccontd < 10 ? "0"+timeServ.GetMiliSeccontd : timeServ.GetMiliSeccontd}}
+    </div>
+</div>

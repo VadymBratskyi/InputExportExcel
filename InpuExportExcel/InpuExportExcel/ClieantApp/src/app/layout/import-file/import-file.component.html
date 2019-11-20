@@ -1,2 +1,14 @@
 <app-file-upload></app-file-upload>
+<div class="btn_pars">
+    <table>
+        <tr>
+            <td><button mat-raised-button color="warn" (click)="onDomParsing()">DOM</button></td>
+            <td>{{domTimePars ? domTimePars.TerraTimeToString : '00:00:00'}}</td>
+        </tr>
+        <tr>
+            <td><button mat-raised-button color="accent" (click)="onSaxParsing()">SAX</button></td>
+            <td>{{saxTimePars ? saxTimePars.TerraTimeToString : '00:00:00'}}</td>
+        </tr>
+    </table>  
+</div>
 <button mat-raised-button color="primary" (click)="onRefresh()">Refresh</button>
