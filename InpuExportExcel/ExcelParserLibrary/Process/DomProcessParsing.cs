@@ -1,69 +1,74 @@
 ﻿using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Spreadsheet;
 using ExcelParserLibrary.Inrterface;
-using ExcelParserLibrary.Models;
+using InputExportExcel.DAL;
+using InputExportExcel.DAL.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
 namespace ExcelParserLibrary.Process
 {
-    public class DomProcessParsing: IProcesParsing
+    public class DomProcessParsing: ProcesParsing, IProcesParsing
     {
-        public DomProcessParsing()
-        {
+        public DomProcessParsing(InputExportDbContext context) : base(context) { }
 
-        }
+        public bool ParsingIntoDb(string filePath)
+        {            
 
-        public List<TestObject> Parsing(string filePath)
-        {
-            using (SpreadsheetDocument spreadsheetDocument = SpreadsheetDocument.Open(filePath, false))
+            try
             {
-                WorkbookPart workbookPart = spreadsheetDocument.WorkbookPart;
-                WorksheetPart worksheetPart = workbookPart.WorksheetParts.First();
-
-                SheetData sheetData = worksheetPart.Worksheet.GetFirstChild<SheetData>();
-
-                List<TestObject> listObjects = new List<TestObject>();
-
-                foreach (Row r in sheetData.Elements<Row>().Skip(1))
+                using (Stream swtream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read))
                 {
-                    var testObject = new TestObject();
 
-                    foreach (Cell c in r.Elements<Cell>())
-                    {
-                        var currentValue = string.Empty;
-                        if (c.DataType != null) {
+                    using (SpreadsheetDocument spreadsheetDocument = SpreadsheetDocument.Open(filePath, false)) {
 
-                            if (c.DataType == CellValues.SharedString) {
+                        WorkbookPart workbookPart = spreadsheetDocument.WorkbookPart;
+                        WorksheetPart worksheetPart = workbookPart.WorksheetParts.First();
 
-                                int id;
-                                if (Int32.TryParse(c.InnerText, out id))
+                        SheetData sheetData = worksheetPart.Worksheet.GetFirstChild<SheetData>();
+
+                        foreach (Row row in sheetData.Elements<Row>().Skip(1))
+                        {
+                            var testObject = new TestObject();
+
+                            foreach (Cell cell in row.Elements<Cell>())
+                            {
+
+                                var cellIndex = GetColumnIndexFromName(GetColumnName(cell.CellReference));
+
+                                if (cellIndex == 1)
                                 {
-                                    SharedStringItem item = workbookPart.SharedStringTablePart.SharedStringTable.Elements<SharedStringItem>().ElementAt(id);
-
-                                    if (item.Text != null)
-                                    {
-                                        if (Regex.IsMatch(c.CellReference, "A\\d"))
-                                        {
-                                            testObject.Name = item.Text.Text;
-                                        }
-                                        else if (Regex.IsMatch(c.CellReference, "B\\d"))
-                                        {
-                                            testObject.Number = item.Text.Text == "М" ? 1 : 0;
-                                        }                                        
-                                    }  
+                                    testObject.Name = GetCellValue(cell, workbookPart);
                                 }
+                                else if (cellIndex == 2)
+                                {
+                                    testObject.Gender = GetCellValue(cell, workbookPart);
+                                }
+
                             }
-                        }             
+
+                            listObjects.Add(testObject);
+                        }
+
+                        SaveItemsDataToDb();
+
+                        return true;
+
                     }
-                    listObjects.Add(testObject);
+                
                 }
-                return listObjects;
-            }            
+
+            }
+            catch (Exception ex) {
+                throw new Exception(ex.Message);
+            }                       
             
         }
+
     }
+
 }

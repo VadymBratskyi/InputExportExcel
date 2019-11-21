@@ -1,0 +1,7 @@
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\InputExportExcel.DAL\bin\Debug\netcoreapp2.2\InputExportExcel.DAL.deps.json
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\InputExportExcel.DAL\bin\Debug\netcoreapp2.2\InputExportExcel.DAL.dll
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\InputExportExcel.DAL\bin\Debug\netcoreapp2.2\InputExportExcel.DAL.pdb
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\InputExportExcel.DAL\obj\Debug\netcoreapp2.2\InputExportExcel.DAL.AssemblyInfoInputs.cache
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\InputExportExcel.DAL\obj\Debug\netcoreapp2.2\InputExportExcel.DAL.AssemblyInfo.cs
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\InputExportExcel.DAL\obj\Debug\netcoreapp2.2\InputExportExcel.DAL.dll
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\InputExportExcel.DAL\obj\Debug\netcoreapp2.2\InputExportExcel.DAL.pdb

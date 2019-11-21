@@ -26,9 +26,9 @@
         "dependencies": {
           "Bogus": "28.4.1",
           "ExcelParserLibrary": "1.0.0",
+          "InputExportExcel.DAL": "1.0.0",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
-          "Microsoft.EntityFrameworkCore": "2.2.6",
           "Microsoft.NETCore.App": "2.2.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.2.4"
         },
@@ -468,13 +468,25 @@
       },
       "ExcelParserLibrary/1.0.0": {
         "dependencies": {
-          "DocumentFormat.OpenXml": "2.9.1"
+          "DocumentFormat.OpenXml": "2.9.1",
+          "InputExportExcel.DAL": "1.0.0"
         },
         "runtime": {
           "ExcelParserLibrary.dll": {}
         },
         "compile": {
           "ExcelParserLibrary.dll": {}
+        }
+      },
+      "InputExportExcel.DAL/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.2.6"
+        },
+        "runtime": {
+          "InputExportExcel.DAL.dll": {}
+        },
+        "compile": {
+          "InputExportExcel.DAL.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3808,6 +3820,11 @@
       "hashPath": "system.linq.queryable.4.0.1.nupkg.sha512"
     },
     "ExcelParserLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InputExportExcel.DAL/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

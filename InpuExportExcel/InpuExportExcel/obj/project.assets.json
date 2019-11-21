@@ -4757,13 +4757,27 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
-          "DocumentFormat.OpenXml": "2.9.1"
+          "DocumentFormat.OpenXml": "2.9.1",
+          "InputExportExcel.DAL": "1.0.0"
         },
         "compile": {
           "bin/placeholder/ExcelParserLibrary.dll": {}
         },
         "runtime": {
           "bin/placeholder/ExcelParserLibrary.dll": {}
+        }
+      },
+      "InputExportExcel.DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.2.6"
+        },
+        "compile": {
+          "bin/placeholder/InputExportExcel.DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InputExportExcel.DAL.dll": {}
         }
       }
     }
@@ -13039,15 +13053,20 @@
       "type": "project",
       "path": "../ExcelParserLibrary/ExcelParserLibrary.csproj",
       "msbuildProject": "../ExcelParserLibrary/ExcelParserLibrary.csproj"
+    },
+    "InputExportExcel.DAL/1.0.0": {
+      "type": "project",
+      "path": "../InputExportExcel.DAL/InputExportExcel.DAL.csproj",
+      "msbuildProject": "../InputExportExcel.DAL/InputExportExcel.DAL.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "Bogus >= 28.4.1",
       "ExcelParserLibrary >= 1.0.0",
+      "InputExportExcel.DAL >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
-      "Microsoft.EntityFrameworkCore >= 2.2.6",
       "Microsoft.NETCore.App >= 2.2.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.4"
     ]
@@ -13084,6 +13103,9 @@
           "projectReferences": {
             "C:\\VadimBratskyi\\Git\\VadymBratskyi\\InputExportExcel\\InpuExportExcel\\ExcelParserLibrary\\ExcelParserLibrary.csproj": {
               "projectPath": "C:\\VadimBratskyi\\Git\\VadymBratskyi\\InputExportExcel\\InpuExportExcel\\ExcelParserLibrary\\ExcelParserLibrary.csproj"
+            },
+            "C:\\VadimBratskyi\\Git\\VadymBratskyi\\InputExportExcel\\InpuExportExcel\\InputExportExcel.DAL\\InputExportExcel.DAL.csproj": {
+              "projectPath": "C:\\VadimBratskyi\\Git\\VadymBratskyi\\InputExportExcel\\InpuExportExcel\\InputExportExcel.DAL\\InputExportExcel.DAL.csproj"
             }
           }
         }
@@ -13111,10 +13133,6 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[2.2.0, )"
-          },
-          "Microsoft.EntityFrameworkCore": {
-            "target": "Package",
-            "version": "[2.2.6, )"
           },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",

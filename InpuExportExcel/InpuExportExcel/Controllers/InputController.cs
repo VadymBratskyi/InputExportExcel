@@ -4,9 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Bogus;
-using ExcelParserLibrary.Models;
 using ExcelParserLibrary.Process;
-using InpuExportExcel.Models;
+using InputExportExcel.DAL;
+using InputExportExcel.DAL.Models;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -41,29 +41,24 @@ namespace InpuExportExcel.Controllers
         [HttpPost("[action]")]
         public async Task<IActionResult> PostDomParsing([FromBody] MyFile myFile)
         {
-            var filePath = _hosting.WebRootPath + "\\Files\\" + myFile.FileName;
+            var filePath = Path.Combine(_hosting.WebRootPath, "Files", myFile.FileName);
                      
             if (System.IO.File.Exists(filePath)) {
-                DomProcessParsing parsing = new DomProcessParsing();
-                var result = parsing.Parsing(filePath);
-                if (result.Any()) {
-                    _db.TestObjects.AddRange(result);
-                    _db.SaveChanges();
-                }
+                DomProcessParsing parsing = new DomProcessParsing(_db);
+                parsing.ParsingIntoDb(filePath);                
             }
+            
             return Ok();
         }
 
         [HttpPost("[action]")]
         public async Task<IActionResult> PostSaxParsing([FromBody] MyFile myFile)
         {
-            var filePath = _hosting.WebRootPath + "Files\\" + myFile.FileName;
+            var filePath = Path.Combine(_hosting.WebRootPath, "Files", myFile.FileName);
 
-            if (System.IO.File.Exists(filePath))
-            {
-                SaxProcessParsing parsing = new SaxProcessParsing();
-                var result = parsing.Parsing(filePath);
-
+            if (System.IO.File.Exists(filePath)) {
+                SaxProcessParsing parsing = new SaxProcessParsing(_db);
+                parsing.ParsingIntoDb(filePath);           
             }
 
             return Ok();
@@ -137,14 +132,14 @@ namespace InpuExportExcel.Controllers
             var faker = new Faker("ru");
             testList = new List<TestObject>()
             {
-                new TestObject() { Name = faker.Name.FullName(), Number = 1 },
-                new TestObject() { Name = faker.Name.FullName(), Number = 2 },
-                new TestObject() { Name = faker.Name.FullName(), Number = 3 },
-                new TestObject() { Name = faker.Name.FullName(), Number = 4 },
-                new TestObject() { Name = faker.Name.FullName(), Number = 5 },
-                new TestObject() { Name = faker.Name.FullName(), Number = 6 },
-                new TestObject() { Name = faker.Name.FullName(), Number = 7 },
-                new TestObject() { Name = faker.Name.FullName(), Number = 8 }
+                new TestObject() { Name = faker.Name.FullName(), Gender = faker.Person.Gender.ToString() },
+                new TestObject() { Name = faker.Name.FullName(), Gender = faker.Person.Gender.ToString() },
+                new TestObject() { Name = faker.Name.FullName(), Gender = faker.Person.Gender.ToString() },
+                new TestObject() { Name = faker.Name.FullName(), Gender = faker.Person.Gender.ToString() },
+                new TestObject() { Name = faker.Name.FullName(), Gender = faker.Person.Gender.ToString() },
+                new TestObject() { Name = faker.Name.FullName(), Gender = faker.Person.Gender.ToString() },
+                new TestObject() { Name = faker.Name.FullName(), Gender = faker.Person.Gender.ToString() },
+                new TestObject() { Name = faker.Name.FullName(), Gender = faker.Person.Gender.ToString() }
             };
         }
 

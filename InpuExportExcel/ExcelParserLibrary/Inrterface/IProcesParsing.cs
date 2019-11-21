@@ -1,12 +1,13 @@
-﻿using ExcelParserLibrary.Models;
+﻿using InputExportExcel.DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace ExcelParserLibrary.Inrterface
 {
     public interface IProcesParsing
     {
-        List<TestObject> Parsing(string filePath);
+        bool ParsingIntoDb(string filePath);
     }
 }

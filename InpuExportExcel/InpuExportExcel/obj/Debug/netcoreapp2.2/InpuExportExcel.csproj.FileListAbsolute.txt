@@ -34,3 +34,5 @@ C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\InpuExportEx
 C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\InpuExportExcel\bin\Debug\netcoreapp2.2\ExcelParserLibrary.dll
 C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\InpuExportExcel\bin\Debug\netcoreapp2.2\ExcelParserLibrary.pdb
 C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\InpuExportExcel\obj\Debug\netcoreapp2.2\InpuExportExcel.csproj.CopyComplete
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\InpuExportExcel\bin\Debug\netcoreapp2.2\InputExportExcel.DAL.dll
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\InpuExportExcel\bin\Debug\netcoreapp2.2\InputExportExcel.DAL.pdb

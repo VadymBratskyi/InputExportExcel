@@ -38,15 +38,22 @@ export class ImportFileComponent implements OnInit, OnDestroy {
     .pipe(takeUntil(this.$destroy))
     .subscribe(result => {
       this.domTimePars = this.timeServ.pauseTimer();      
-    },error => {alert("Sorry!!! Can't pars file!");this.timeServ.pauseTimerError();});
+    },error => {
+      alert("Sorry!!! Can't pars file!");
+      this.timeServ.pauseTimerError();
+    });
 
   }
 
   onSaxParsing() {
+    this.timeServ.startTimer();
     this.importServ.postSaxParsing()
     .pipe(takeUntil(this.$destroy))
     .subscribe(result => {
-      
+      this.saxTimePars = this.timeServ.pauseTimer();  
+    },error => {
+      alert("Sorry!!! Can't pars file!");
+      this.timeServ.pauseTimerError();
     });
   }
 
