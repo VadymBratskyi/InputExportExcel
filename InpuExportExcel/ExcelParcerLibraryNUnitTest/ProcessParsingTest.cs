@@ -1,9 +1,8 @@
-using ExcelParserLibrary.Process;
 using NUnit.Framework;
 
 namespace ExcelParcerLibraryNUnitTest
 {
-    public class Tests
+    public class ProcessParsingTest
     {
         [SetUp]
         public void Setup()
@@ -13,27 +12,27 @@ namespace ExcelParcerLibraryNUnitTest
         [Test]
         public void DomProcessParsingTest()
         {
-            var filePath = @"C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\InpuExportExcel\wwwroot\Files\TestValue_20000.xlsx";
+            //var filePath = @"C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\InpuExportExcel\wwwroot\Files\TestValue_20000.xlsx";
 
-            var actual = 20000;
+            //var actual = 20000;
 
-            DomProcessParsing domProcess = new DomProcessParsing();
-            var expected = domProcess.Parsing(filePath).Count;
+            //DomProcessParsing domProcess = new DomProcessParsing();
+            //var expected = domProcess.Parsing(filePath).Count;
 
-            Assert.AreEqual(expected, actual);
+            //Assert.AreEqual(expected, actual);
         }
 
         [Test]
         public void SaxProcessParsingTest()
         {
-            var filePath = @"C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\InpuExportExcel\wwwroot\Files\TestValue_20000.xlsx";
+            //var filePath = @"C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\InpuExportExcel\wwwroot\Files\TestValue_20000.xlsx";
 
-            var actual = 20000;
+            //var actual = 20000;
 
-            SaxProcessParsing domProcess = new SaxProcessParsing();
-            var expected = domProcess.Parsing(filePath).Count;
+            //SaxProcessParsing domProcess = new SaxProcessParsing();
+            //var expected = domProcess.Parsing(filePath).Count;
 
-            Assert.AreEqual(expected, actual);
+            //Assert.AreEqual(expected, actual);
         }
     }
 }

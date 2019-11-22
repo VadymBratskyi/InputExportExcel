@@ -5,3 +5,4 @@ C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\InputExportE
 C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\InputExportExcel.DAL\obj\Debug\netcoreapp2.2\InputExportExcel.DAL.AssemblyInfo.cs
 C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\InputExportExcel.DAL\obj\Debug\netcoreapp2.2\InputExportExcel.DAL.dll
 C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\InputExportExcel.DAL\obj\Debug\netcoreapp2.2\InputExportExcel.DAL.pdb
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\InputExportExcel.DAL\obj\Debug\netcoreapp2.2\InputExportExcel.DAL.csprojAssemblyReference.cache

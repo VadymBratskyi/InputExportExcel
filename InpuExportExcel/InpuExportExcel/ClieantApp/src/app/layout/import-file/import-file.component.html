@@ -2,13 +2,35 @@
 <div class="btn_pars">
     <table>
         <tr>
-            <td><button mat-raised-button color="warn" (click)="onDomParsing()">DOM</button></td>
-            <td>{{domTimePars ? domTimePars.TerraTimeToString : '00:00:00'}}</td>
-        </tr>
-        <tr>
-            <td><button mat-raised-button color="accent" (click)="onSaxParsing()">SAX</button></td>
-            <td>{{saxTimePars ? saxTimePars.TerraTimeToString : '00:00:00'}}</td>
+            <td>
+                <label>Table:  Contacts</label><br/>
+                <label>Douments:  {{selectedDoc}}</label>
+            </td>
+            <td>
+                <table>
+                        <tr>
+                            <td><button mat-raised-button color="warn" (click)="onDomParsing()">DOM</button></td>
+                            <td>{{domTimePars ? domTimePars.TerraTimeToString : '00:00:00'}}</td>
+                        </tr>
+                        <tr>
+                            <td><button mat-raised-button color="accent" (click)="onSaxParsing()">SAX</button></td>
+                            <td>{{saxTimePars ? saxTimePars.TerraTimeToString : '00:00:00'}}</td>
+                        </tr>
+                </table>
+            </td>
+            <td>
+                <button mat-raised-button color="primary" (click)="onRefresh()">Refresh</button>
+            </td>
+            
+            <!-- <mat-form-field>
+                <mat-label>Excel documents</mat-label>
+                <mat-select [(ngModel)]="selectedDoc">
+                    <mat-option *ngFor="let doc of excelDocuments" [value]="doc">
+                    {{doc}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field> -->
         </tr>
     </table>  
 </div>
-<button mat-raised-button color="primary" (click)="onRefresh()">Refresh</button>
+
