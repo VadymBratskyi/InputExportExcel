@@ -5,10 +5,8 @@ using ExcelParserLibrary.Inrterface;
 using InputExportExcel.DAL;
 using InputExportExcel.DAL.Models;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text.RegularExpressions;
 
 namespace ExcelParserLibrary.Process
 {
@@ -25,10 +23,12 @@ namespace ExcelParserLibrary.Process
             try
             {
 
-                using (Stream swtream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read)) {
+                using (Stream swtream = new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.Read))
+                {
 
 
-                    using (SpreadsheetDocument spreadsheetDocument = SpreadsheetDocument.Open(filePath, false)) {
+                    using (SpreadsheetDocument spreadsheetDocument = SpreadsheetDocument.Open(filePath, false))
+                    {
 
                         WorkbookPart workbookPart = spreadsheetDocument.WorkbookPart;
                         WorksheetPart worksheetPart = workbookPart.WorksheetParts.First();
@@ -37,7 +37,8 @@ namespace ExcelParserLibrary.Process
 
                         int i = 0;
 
-                        while (reader.Read()) {
+                        while (reader.Read())
+                        {
 
                             if (reader.ElementType == typeof(Row))
                             {
@@ -49,10 +50,10 @@ namespace ExcelParserLibrary.Process
 
                                 reader.ReadFirstChild();
 
-                                var testObject = new TestObject();
+                                var testContact = new TestContact();
 
                                 do
-                                {                                    
+                                {
 
                                     if (reader.ElementType == typeof(Cell))
                                     {
@@ -60,14 +61,7 @@ namespace ExcelParserLibrary.Process
 
                                         var cellIndex = GetColumnIndexFromName(GetColumnName(cell.CellReference));
 
-                                        if (cellIndex == 1)
-                                        {
-                                            testObject.Name = GetCellValue(cell, workbookPart);
-                                        }
-                                        else if (cellIndex == 2)
-                                        {
-                                            testObject.Gender = GetCellValue(cell, workbookPart);
-                                        }
+                                        FullingProperties(testContact, cell, workbookPart);
 
                                     }
 
@@ -75,42 +69,38 @@ namespace ExcelParserLibrary.Process
 
                                 //SaveSinglDataToDb(testObject);
 
-                                if (listObjects.Count < CountInChunk)
-                                { 
-                                    listObjects.Add(testObject);
-                                }
-                                else
+                                if (listContacts.Count == CountInChunk)
                                 {
-                                    var first = listObjects.FirstOrDefault();
-                                    var last = listObjects.LastOrDefault();
-
                                     SaveItemsDataToDb();
-                                    listObjects.Add(testObject);
                                 }
+
+                                listContacts.Add(testContact);
 
                             }
 
                         }
 
-                        if (listObjects.Any()) {
+                        if (listContacts.Any())
+                        {
                             SaveItemsDataToDb();
                         }
 
-                    }    
-                    
+                    }
+
                 }
 
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 throw new Exception(ex.Message);
             }
 
             return true;
-            
+
         }
 
-        
 
-    }   
+
+    }
 
 }

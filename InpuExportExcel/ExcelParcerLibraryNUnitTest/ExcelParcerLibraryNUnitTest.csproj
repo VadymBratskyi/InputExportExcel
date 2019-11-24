@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ExcelParserLibrary\ExcelParserLibrary.csproj" />
+    <ProjectReference Include="..\InputExportExcel.DAL\InputExportExcel.DAL.csproj" />
   </ItemGroup>
 
 </Project>

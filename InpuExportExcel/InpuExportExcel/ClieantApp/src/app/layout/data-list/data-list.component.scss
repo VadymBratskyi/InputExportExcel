@@ -1,6 +1,6 @@
 .example-container {
   position: relative;
-  min-height: 200px;
+  min-height: 100%;
 }
 
 .example-table-container {
@@ -39,4 +39,13 @@ table {
 
 .mat-column-created {
   max-width: 124px;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td, th {
+  width: 25%;
 }

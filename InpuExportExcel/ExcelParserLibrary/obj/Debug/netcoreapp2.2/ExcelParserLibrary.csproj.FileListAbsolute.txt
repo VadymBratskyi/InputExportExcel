@@ -10,11 +10,11 @@ C:\GithubProject\InputExportExcel\InpuExportExcel\ExcelParserLibrary\obj\Debug\n
 C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\ExcelParserLibrary\bin\Debug\netcoreapp2.2\ExcelParserLibrary.deps.json
 C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\ExcelParserLibrary\bin\Debug\netcoreapp2.2\ExcelParserLibrary.dll
 C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\ExcelParserLibrary\bin\Debug\netcoreapp2.2\ExcelParserLibrary.pdb
-C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\ExcelParserLibrary\obj\Debug\netcoreapp2.2\ExcelParserLibrary.AssemblyInfoInputs.cache
-C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\ExcelParserLibrary\obj\Debug\netcoreapp2.2\ExcelParserLibrary.AssemblyInfo.cs
-C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\ExcelParserLibrary\obj\Debug\netcoreapp2.2\ExcelParserLibrary.dll
-C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\ExcelParserLibrary\obj\Debug\netcoreapp2.2\ExcelParserLibrary.pdb
-C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\ExcelParserLibrary\obj\Debug\netcoreapp2.2\ExcelParserLibrary.csprojAssemblyReference.cache
 C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\ExcelParserLibrary\bin\Debug\netcoreapp2.2\InputExportExcel.DAL.dll
 C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\ExcelParserLibrary\bin\Debug\netcoreapp2.2\InputExportExcel.DAL.pdb
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\ExcelParserLibrary\obj\Debug\netcoreapp2.2\ExcelParserLibrary.csprojAssemblyReference.cache
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\ExcelParserLibrary\obj\Debug\netcoreapp2.2\ExcelParserLibrary.AssemblyInfoInputs.cache
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\ExcelParserLibrary\obj\Debug\netcoreapp2.2\ExcelParserLibrary.AssemblyInfo.cs
 C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\ExcelParserLibrary\obj\Debug\netcoreapp2.2\ExcelParserLibrary.csproj.CopyComplete
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\ExcelParserLibrary\obj\Debug\netcoreapp2.2\ExcelParserLibrary.dll
+C:\VadimBratskyi\Git\VadymBratskyi\InputExportExcel\InpuExportExcel\ExcelParserLibrary\obj\Debug\netcoreapp2.2\ExcelParserLibrary.pdb

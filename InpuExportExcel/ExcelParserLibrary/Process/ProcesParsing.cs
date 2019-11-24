@@ -5,19 +5,20 @@ using InputExportExcel.DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace ExcelParserLibrary.Process
 {
     public class ProcesParsing
     {
-        public List<TestObject> listObjects;
+
+        public List<TestContact> listContacts;
 
         InputExportDbContext _db;
 
-        public ProcesParsing(InputExportDbContext context) {
+        public ProcesParsing(InputExportDbContext context)
+        {
             _db = context;
-            listObjects = new List<TestObject>();
+            listContacts = new List<TestContact>();
         }
 
         protected string GetCellValue(Cell cell, WorkbookPart workbookPart)
@@ -26,7 +27,7 @@ namespace ExcelParserLibrary.Process
 
             if (cell.DataType != null && cell.DataType == CellValues.SharedString)
             {
-                SharedStringItem item =  workbookPart.SharedStringTablePart.SharedStringTable.Elements<SharedStringItem>().ElementAt(int.Parse(cell.CellValue.InnerText));
+                SharedStringItem item = workbookPart.SharedStringTablePart.SharedStringTable.Elements<SharedStringItem>().ElementAt(int.Parse(cell.CellValue.InnerText));
                 if (item.Text != null)
                 {
                     cellValue = item.Text.Text;
@@ -44,15 +45,17 @@ namespace ExcelParserLibrary.Process
 
         protected string GetColumnName(string cellReference)
         {
-            for (int lastCharPos = 0; lastCharPos <= cellReference.Length; lastCharPos++) {
+            for (int lastCharPos = 0; lastCharPos <= cellReference.Length; lastCharPos++)
+            {
 
-                if (char.IsNumber(cellReference[lastCharPos])) {
+                if (char.IsNumber(cellReference[lastCharPos]))
+                {
 
                     return cellReference.Substring(0, lastCharPos);
 
                 }
 
-            }      
+            }
 
             throw new ArgumentOutOfRangeException("cellReference");
         }
@@ -74,22 +77,64 @@ namespace ExcelParserLibrary.Process
             return columnIndex;
         }
 
-        protected void SaveItemsDataToDb() {
+        protected void SaveItemsDataToDb()
+        {
 
-            if (listObjects.Any()) {
-                _db.AddRange(listObjects);
+            if (listContacts.Any())
+            {
+                _db.AddRange(listContacts);
                 _db.SaveChanges();
-                listObjects.Clear();
+                listContacts.Clear();
             }
         }
 
-        protected void SaveSinglDataToDb(TestObject testObjetc) {
+        protected void SaveSinglDataToDb(TestContact testContact)
+        {
 
-            if (testObjetc != null)
+            if (testContact != null)
             {
-                _db.AddRange(testObjetc);
+                _db.AddRange(testContact);
                 _db.SaveChanges();
             }
+        }
+
+        protected void FullingProperties(TestContact testContact, Cell cell, WorkbookPart workbookPart)
+        {
+
+            var cellIndex = GetColumnIndexFromName(GetColumnName(cell.CellReference));
+
+            switch (cellIndex)
+            {
+
+                case 1:
+                    testContact.FullName = GetCellValue(cell, workbookPart);
+                    break;
+                case 2:
+                    testContact.BirthDate = GetCellValue(cell, workbookPart);
+                    break;
+                case 3:
+                    testContact.Account = GetCellValue(cell, workbookPart);
+                    break;
+                case 4:
+                    testContact.BusinessPhone = GetCellValue(cell, workbookPart);
+                    break;
+                case 5:
+                    testContact.Address = GetCellValue(cell, workbookPart);
+                    break;
+                case 6:
+                    testContact.Email = GetCellValue(cell, workbookPart);
+                    break;
+                case 7:
+                    testContact.Gender = GetCellValue(cell, workbookPart);
+                    break;
+                case 8:
+                    testContact.JobTitle = GetCellValue(cell, workbookPart);
+                    break;
+                case 9:
+                    testContact.Department = GetCellValue(cell, workbookPart);
+                    break;
+            }
+
         }
     }
 }

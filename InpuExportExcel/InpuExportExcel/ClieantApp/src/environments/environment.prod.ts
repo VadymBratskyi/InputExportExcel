@@ -3,7 +3,8 @@ export const environment = {
   localhostApp: 'http://localhost:54641',
   urlApi: 'api/Input',
   methodPostTestObjects: 'PostTestObjects',
-  methodGetTestObjects: 'GetTestObjects',
+  methodGetTestContacts: 'GetTestContacts',
   methodPostDomParsing: 'PostDomParsing',
-  methodPostSaxParsing: 'PostSaxParsing'
+  methodPostSaxParsing: 'PostSaxParsing',
+  methodGetAbleExcelFiles: 'GetAbleExcelFiles'
 };

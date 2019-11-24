@@ -31,8 +31,8 @@ export class TerraTimmerService {
   startTimer() {
     this.start = true;
     this.interval = setInterval(() => {
-      if(this.currentMiliSeccontd >= 60) {
-        if(this.currentSeccontd >= 60) {
+      if(this.currentMiliSeccontd == 59) {
+        if(this.currentSeccontd == 59) {
           this.currentMinutes++;
           this.currentSeccontd = 0;
         } else {

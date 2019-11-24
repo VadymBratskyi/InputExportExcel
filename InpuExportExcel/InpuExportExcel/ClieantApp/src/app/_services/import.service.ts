@@ -2,9 +2,10 @@ import { Injectable, Output, EventEmitter } from '@angular/core';
 import { TestObject } from '../_models/TestObject';
 import { Observable, of } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { MyFile } from '../_models/MyFile';
+import { GridParams } from '../_models/grid/GridParams';
 
 @Injectable({
   providedIn: 'root'
@@ -18,11 +19,11 @@ export class ImportService {
   ) { }
 
 
-  public postDonParsing(): Observable<boolean> {
+  public postDonParsing(selectedFileName: string): Observable<boolean> {
 
     const url = environment.localhostApp + environment.urlApi + environment.methodPostDomParsing;
 
-    var myFile = new MyFile({ fileName: 'TestValue_20000.xlsx'})
+    var myFile = new MyFile({ fileName: selectedFileName})
 
     return this.http.post(url, myFile)
     .pipe(
@@ -36,11 +37,11 @@ export class ImportService {
     );
   }
 
-  public postSaxParsing(): Observable<boolean> {
+  public postSaxParsing(selectedFileName: string): Observable<boolean> {
 
     const url = environment.localhostApp + environment.urlApi + environment.methodPostSaxParsing;
 
-    var myFile = new MyFile({ fileName: 'TestValue_20000.xlsx'})
+    var myFile = new MyFile({ fileName: selectedFileName})
 
     return this.http.post(url, myFile)
     .pipe(
@@ -52,8 +53,23 @@ export class ImportService {
         return Observable.throw(error);
       })
     );
-
   }  
+
+  public getAbleExcelDocuments(): Observable<string[]> {
+
+    const url = environment.localhostApp + environment.urlApi + environment.methodGetAbleExcelFiles;         
+
+    return this.http.get(url)
+    .pipe(
+        map((response: string[]) => {
+          return response;
+      }),
+      catchError((error: HttpErrorResponse) => {
+        console.error('getAbleExcelDocuments: ', error);       
+        return Observable.throw(error);
+      })
+    );
+  }
 
   public postTestObjects(): Observable<TestObject> {
     
@@ -74,12 +90,17 @@ export class ImportService {
       })
     );
   }
-  
-  public getTestObjects(): Observable<TestObject[]> {
+
+  public getTestObjects(gridParams: GridParams): Observable<any> {
     
-    const url = environment.localhostApp + environment.urlApi + environment.methodGetTestObjects;
+    const url = environment.localhostApp + environment.urlApi + environment.methodGetTestContacts;
          
-    return this.http.get(url)
+
+    let httpParams = new HttpParams()  
+    .set('skip', gridParams.skip.toString())
+    .set('take', gridParams.take.toString());
+
+    return this.http.get(url,{ params: httpParams })
     .pipe(
         map((response: any) => {
           return response;
