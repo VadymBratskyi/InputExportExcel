@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParcerLibraryNUnitTest\\ExcelParcerLibraryNUnitTest.csproj": {}
+    "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParcerLibraryUnitTest\\ExcelParcerLibraryUnitTest.csproj": {}
   },
   "projects": {
-    "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParcerLibraryNUnitTest\\ExcelParcerLibraryNUnitTest.csproj": {
+    "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParcerLibraryUnitTest\\ExcelParcerLibraryUnitTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParcerLibraryNUnitTest\\ExcelParcerLibraryNUnitTest.csproj",
-        "projectName": "ExcelParcerLibraryNUnitTest",
-        "projectPath": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParcerLibraryNUnitTest\\ExcelParcerLibraryNUnitTest.csproj",
+        "projectUniqueName": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParcerLibraryUnitTest\\ExcelParcerLibraryUnitTest.csproj",
+        "projectName": "ExcelParcerLibraryUnitTest",
+        "projectPath": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParcerLibraryUnitTest\\ExcelParcerLibraryUnitTest.csproj",
         "packagesPath": "C:\\Users\\Vadim\\.nuget\\packages\\",
-        "outputPath": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParcerLibraryNUnitTest\\obj\\",
+        "outputPath": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParcerLibraryUnitTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -34,6 +34,9 @@
             "projectReferences": {
               "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParserLibrary\\ExcelParserLibrary.csproj": {
                 "projectPath": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParserLibrary\\ExcelParserLibrary.csproj"
+              },
+              "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\InputExportExcel.DAL\\InputExportExcel.DAL.csproj": {
+                "projectPath": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\InputExportExcel.DAL\\InputExportExcel.DAL.csproj"
               }
             }
           }
@@ -49,7 +52,7 @@
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[16.2.0, )"
+              "version": "[15.9.0, )"
             },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
@@ -59,11 +62,11 @@
             },
             "NUnit3TestAdapter": {
               "target": "Package",
-              "version": "[3.13.0, )"
+              "version": "[3.11.0, )"
             },
             "nunit": {
               "target": "Package",
-              "version": "[3.12.0, )"
+              "version": "[3.11.0, )"
             }
           },
           "imports": [

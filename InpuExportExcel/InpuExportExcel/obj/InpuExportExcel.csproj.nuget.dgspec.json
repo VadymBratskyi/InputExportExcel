@@ -1,24 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\VadimBratskyi\\Git\\VadymBratskyi\\InputExportExcel\\InpuExportExcel\\InpuExportExcel\\InpuExportExcel.csproj": {}
+    "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\InpuExportExcel\\InpuExportExcel.csproj": {}
   },
   "projects": {
-    "C:\\VadimBratskyi\\Git\\VadymBratskyi\\InputExportExcel\\InpuExportExcel\\ExcelParserLibrary\\ExcelParserLibrary.csproj": {
+    "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParserLibrary\\ExcelParserLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\VadimBratskyi\\Git\\VadymBratskyi\\InputExportExcel\\InpuExportExcel\\ExcelParserLibrary\\ExcelParserLibrary.csproj",
+        "projectUniqueName": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParserLibrary\\ExcelParserLibrary.csproj",
         "projectName": "ExcelParserLibrary",
-        "projectPath": "C:\\VadimBratskyi\\Git\\VadymBratskyi\\InputExportExcel\\InpuExportExcel\\ExcelParserLibrary\\ExcelParserLibrary.csproj",
-        "packagesPath": "C:\\Users\\v.bratskyi\\.nuget\\packages\\",
-        "outputPath": "C:\\VadimBratskyi\\Git\\VadymBratskyi\\InputExportExcel\\InpuExportExcel\\ExcelParserLibrary\\obj\\",
+        "projectPath": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParserLibrary\\ExcelParserLibrary.csproj",
+        "packagesPath": "C:\\Users\\Vadim\\.nuget\\packages\\",
+        "outputPath": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParserLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\v.bratskyi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Vadim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
@@ -30,8 +32,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\VadimBratskyi\\Git\\VadymBratskyi\\InputExportExcel\\InpuExportExcel\\InputExportExcel.DAL\\InputExportExcel.DAL.csproj": {
-                "projectPath": "C:\\VadimBratskyi\\Git\\VadymBratskyi\\InputExportExcel\\InpuExportExcel\\InputExportExcel.DAL\\InputExportExcel.DAL.csproj"
+              "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\InputExportExcel.DAL\\InputExportExcel.DAL.csproj": {
+                "projectPath": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\InputExportExcel.DAL\\InputExportExcel.DAL.csproj"
               }
             }
           }
@@ -57,34 +59,30 @@
             }
           },
           "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
+            "net461"
           ],
           "assetTargetFallback": true,
-          "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "warn": true
         }
       }
     },
-    "C:\\VadimBratskyi\\Git\\VadymBratskyi\\InputExportExcel\\InpuExportExcel\\InpuExportExcel\\InpuExportExcel.csproj": {
+    "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\InpuExportExcel\\InpuExportExcel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\VadimBratskyi\\Git\\VadymBratskyi\\InputExportExcel\\InpuExportExcel\\InpuExportExcel\\InpuExportExcel.csproj",
+        "projectUniqueName": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\InpuExportExcel\\InpuExportExcel.csproj",
         "projectName": "InpuExportExcel",
-        "projectPath": "C:\\VadimBratskyi\\Git\\VadymBratskyi\\InputExportExcel\\InpuExportExcel\\InpuExportExcel\\InpuExportExcel.csproj",
-        "packagesPath": "C:\\Users\\v.bratskyi\\.nuget\\packages\\",
-        "outputPath": "C:\\VadimBratskyi\\Git\\VadymBratskyi\\InputExportExcel\\InpuExportExcel\\InpuExportExcel\\obj\\",
+        "projectPath": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\InpuExportExcel\\InpuExportExcel.csproj",
+        "packagesPath": "C:\\Users\\Vadim\\.nuget\\packages\\",
+        "outputPath": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\InpuExportExcel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\v.bratskyi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Vadim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
@@ -96,11 +94,11 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\VadimBratskyi\\Git\\VadymBratskyi\\InputExportExcel\\InpuExportExcel\\ExcelParserLibrary\\ExcelParserLibrary.csproj": {
-                "projectPath": "C:\\VadimBratskyi\\Git\\VadymBratskyi\\InputExportExcel\\InpuExportExcel\\ExcelParserLibrary\\ExcelParserLibrary.csproj"
+              "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParserLibrary\\ExcelParserLibrary.csproj": {
+                "projectPath": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParserLibrary\\ExcelParserLibrary.csproj"
               },
-              "C:\\VadimBratskyi\\Git\\VadymBratskyi\\InputExportExcel\\InpuExportExcel\\InputExportExcel.DAL\\InputExportExcel.DAL.csproj": {
-                "projectPath": "C:\\VadimBratskyi\\Git\\VadymBratskyi\\InputExportExcel\\InpuExportExcel\\InputExportExcel.DAL\\InputExportExcel.DAL.csproj"
+              "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\InputExportExcel.DAL\\InputExportExcel.DAL.csproj": {
+                "projectPath": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\InputExportExcel.DAL\\InputExportExcel.DAL.csproj"
               }
             }
           }
@@ -141,34 +139,30 @@
             }
           },
           "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
+            "net461"
           ],
           "assetTargetFallback": true,
-          "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "warn": true
         }
       }
     },
-    "C:\\VadimBratskyi\\Git\\VadymBratskyi\\InputExportExcel\\InpuExportExcel\\InputExportExcel.DAL\\InputExportExcel.DAL.csproj": {
+    "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\InputExportExcel.DAL\\InputExportExcel.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\VadimBratskyi\\Git\\VadymBratskyi\\InputExportExcel\\InpuExportExcel\\InputExportExcel.DAL\\InputExportExcel.DAL.csproj",
+        "projectUniqueName": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\InputExportExcel.DAL\\InputExportExcel.DAL.csproj",
         "projectName": "InputExportExcel.DAL",
-        "projectPath": "C:\\VadimBratskyi\\Git\\VadymBratskyi\\InputExportExcel\\InpuExportExcel\\InputExportExcel.DAL\\InputExportExcel.DAL.csproj",
-        "packagesPath": "C:\\Users\\v.bratskyi\\.nuget\\packages\\",
-        "outputPath": "C:\\VadimBratskyi\\Git\\VadymBratskyi\\InputExportExcel\\InpuExportExcel\\InputExportExcel.DAL\\obj\\",
+        "projectPath": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\InputExportExcel.DAL\\InputExportExcel.DAL.csproj",
+        "packagesPath": "C:\\Users\\Vadim\\.nuget\\packages\\",
+        "outputPath": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\InputExportExcel.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\v.bratskyi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Vadim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
@@ -203,16 +197,10 @@
             }
           },
           "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
+            "net461"
           ],
           "assetTargetFallback": true,
-          "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+          "warn": true
         }
       }
     }
