@@ -17,6 +17,8 @@ export class ImportFileComponent implements OnInit, OnDestroy {
 
    domTimePars: TerraTime;
    saxTimePars: TerraTime;
+   domFromDbTimePars: TerraTime;
+   saxFromDbTimePars: TerraTime;
 
    excelDocuments: string[];
 
@@ -41,6 +43,40 @@ export class ImportFileComponent implements OnInit, OnDestroy {
     .subscribe(result => {
       this.excelDocuments =result;      
     });
+  }
+
+  onDomFromDbParsing() {
+    if(this.selectedDoc) {
+      this.timeServ.startTimer();
+      this.saxFromDbTimePars = null;   
+       this.importServ.postDonFromDbParsing(this.selectedDoc)
+        .pipe(takeUntil(this.$destroy))
+        .subscribe(result => {
+          this.saxFromDbTimePars = this.timeServ.pauseTimer();      
+        },error => {
+          alert("Sorry!!! Can't pars file!");
+          this.timeServ.pauseTimerError();
+        });
+    } else {
+      alert("selected doc is null");
+    }
+  }
+
+  onSaxFromDbParsing() {
+    if(this.selectedDoc) {
+      this.timeServ.startTimer();
+      this.saxFromDbTimePars = null;   
+       this.importServ.postSaxFromDbParsing(this.selectedDoc)
+        .pipe(takeUntil(this.$destroy))
+        .subscribe(result => {
+          this.saxFromDbTimePars = this.timeServ.pauseTimer();      
+        },error => {
+          alert("Sorry!!! Can't pars file!");
+          this.timeServ.pauseTimerError();
+        });
+    } else {
+      alert("selected doc is null");
+    }     
   }
 
   onDomParsing() {

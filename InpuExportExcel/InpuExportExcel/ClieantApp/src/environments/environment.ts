@@ -10,6 +10,8 @@ export const environment = {
   methodGetTestContacts: 'GetTestContacts',
   methodPostDomParsing: 'PostDomParsing',
   methodPostSaxParsing: 'PostSaxParsing',
+  methodPostSaxFromDbParsing: 'PostSaxFromDbParsing',
+  methodPostDomFromDbParsing: 'PostDomFromDbParsing',
   methodGetAbleExcelFiles: 'GetAbleExcelFiles'
 };
 
