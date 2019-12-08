@@ -34,6 +34,9 @@
             "projectReferences": {
               "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParserLibrary\\ExcelParserLibrary.csproj": {
                 "projectPath": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParserLibrary\\ExcelParserLibrary.csproj"
+              },
+              "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\InputExportExcel.DAL\\InputExportExcel.DAL.csproj": {
+                "projectPath": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\InputExportExcel.DAL\\InputExportExcel.DAL.csproj"
               }
             }
           }

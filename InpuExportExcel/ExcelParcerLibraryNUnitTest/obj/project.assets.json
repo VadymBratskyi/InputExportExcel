@@ -6601,6 +6601,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "ExcelParserLibrary >= 1.0.0",
+      "InputExportExcel.DAL >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "NUnit3TestAdapter >= 3.13.0",
@@ -6642,6 +6643,9 @@
           "projectReferences": {
             "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParserLibrary\\ExcelParserLibrary.csproj": {
               "projectPath": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\ExcelParserLibrary\\ExcelParserLibrary.csproj"
+            },
+            "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\InputExportExcel.DAL\\InputExportExcel.DAL.csproj": {
+              "projectPath": "C:\\GithubProject\\InputExportExcel\\InpuExportExcel\\InputExportExcel.DAL\\InputExportExcel.DAL.csproj"
             }
           }
         }
