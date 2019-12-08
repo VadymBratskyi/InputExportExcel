@@ -72,6 +72,8 @@ namespace ExcelParserLibrary.Process
                                 if (listContacts.Count == CountInChunk)
                                 {
                                     SaveItemsDataToDb();
+
+									var ds = Termin()
                                 }
 
                                 listContacts.Add(testContact);

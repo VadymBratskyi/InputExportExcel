@@ -19,6 +19,42 @@ export class ImportService {
   ) { }
 
 
+  public postDonFromDbParsing(selectedFileName: string): Observable<boolean> {
+
+    const url = environment.localhostApp + environment.urlApi + environment.methodPostDomFromDbParsing;
+
+    var myFile = new MyFile({ fileName: selectedFileName})
+
+    return this.http.post(url, myFile)
+    .pipe(
+        map((response: any) => {                  
+          return true;
+      }),
+      catchError((error: HttpErrorResponse) => {
+        console.error('postSaxParsing: ', error);       
+        return Observable.throw(error);
+      })
+    );
+  }
+
+  public postSaxFromDbParsing(selectedFileName: string): Observable<boolean> {
+
+    const url = environment.localhostApp + environment.urlApi + environment.methodPostSaxFromDbParsing;
+
+    var myFile = new MyFile({ fileName: selectedFileName})
+
+    return this.http.post(url, myFile)
+    .pipe(
+        map((response: any) => {                  
+          return true;
+      }),
+      catchError((error: HttpErrorResponse) => {
+        console.error('postSaxParsing: ', error);       
+        return Observable.throw(error);
+      })
+    );
+  }
+
   public postDonParsing(selectedFileName: string): Observable<boolean> {
 
     const url = environment.localhostApp + environment.urlApi + environment.methodPostDomParsing;

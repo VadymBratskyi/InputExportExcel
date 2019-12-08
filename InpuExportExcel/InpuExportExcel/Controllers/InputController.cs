@@ -77,8 +77,7 @@ namespace InpuExportExcel.Controllers
             return Ok();
         }
 
-
-        [HttpPost("[action]")]                          //List<IFormFile>
+		[HttpPost("[action]")]                          //List<IFormFile>
         public async Task<IActionResult> PostAddFile(IFormFileCollection files)
         {
 
