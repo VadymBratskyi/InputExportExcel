@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.0": {
-      "Bogus/28.4.3": {
+      "Bogus/28.4.4": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Bogus.dll": {}
@@ -11,7 +11,7 @@
           "lib/netstandard2.0/Bogus.dll": {}
         }
       },
-      "EFCore.BulkExtensions/3.0.4": {
+      "EFCore.BulkExtensions/3.0.5": {
         "type": "package",
         "dependencies": {
           "FastMember": "1.5.0",
@@ -2248,8 +2248,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.0",
         "dependencies": {
-          "Bogus": "28.4.3",
-          "EFCore.BulkExtensions": "3.0.4",
+          "Bogus": "28.4.4",
+          "EFCore.BulkExtensions": "3.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.0",
           "Microsoft.Extensions.Configuration": "3.1.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "3.1.0",
@@ -2265,14 +2265,14 @@
     }
   },
   "libraries": {
-    "Bogus/28.4.3": {
-      "sha512": "dNEpjkvrSgPBu8g7GdZZi79hcJRRu6n4P26dhJq62itw1ocaCsmMzp32i0BvqNP7E9+nwf+v3sJS3C7fwEc87Q==",
+    "Bogus/28.4.4": {
+      "sha512": "L8VKtXaxl7Nh3ITxvoQ5XRZkh6qhflkiEXd6xufyHqHTEjHnA2a/HVftV19UoloeHsinqtwWnTMq9RU9Kcq+mA==",
       "type": "package",
-      "path": "bogus/28.4.3",
+      "path": "bogus/28.4.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "bogus.28.4.3.nupkg.sha512",
+        "bogus.28.4.4.nupkg.sha512",
         "bogus.nuspec",
         "lib/net40/Bogus.dll",
         "lib/net40/Bogus.pdb",
@@ -2285,14 +2285,14 @@
         "lib/netstandard2.0/Bogus.xml"
       ]
     },
-    "EFCore.BulkExtensions/3.0.4": {
-      "sha512": "LHLhnOOg1wzwuXaWKKb4amkooShKK0bRhnbeCdeZcT/MLAGYUFVOs/sJUSo1bywkL5L483Nse8lf0DHHsSqMGQ==",
+    "EFCore.BulkExtensions/3.0.5": {
+      "sha512": "s4iQNPzYtxI2DZzufgLWwvMy/nIiT2hE52bVJPogdq2CXEcXVus18bxtHUt0gik5t7SqK0nVCS9CWZMOwntKUA==",
       "type": "package",
-      "path": "efcore.bulkextensions/3.0.4",
+      "path": "efcore.bulkextensions/3.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "efcore.bulkextensions.3.0.4.nupkg.sha512",
+        "efcore.bulkextensions.3.0.5.nupkg.sha512",
         "efcore.bulkextensions.nuspec",
         "lib/netstandard2.1/EFCore.BulkExtensions.dll"
       ]
